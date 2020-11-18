@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>缓存 | webpack 找不到北</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="just a test desc">
+    
+    <link rel="preload" href="/webpack/assets/css/0.styles.4cab9dda.css" as="style"><link rel="preload" href="/webpack/assets/js/app.ba403774.js" as="script"><link rel="preload" href="/webpack/assets/js/2.86baee49.js" as="script"><link rel="preload" href="/webpack/assets/js/13.ff4f65b5.js" as="script"><link rel="prefetch" href="/webpack/assets/js/10.767ab816.js"><link rel="prefetch" href="/webpack/assets/js/11.3e24085b.js"><link rel="prefetch" href="/webpack/assets/js/12.63b21f76.js"><link rel="prefetch" href="/webpack/assets/js/14.622c7b2b.js"><link rel="prefetch" href="/webpack/assets/js/15.2c6279be.js"><link rel="prefetch" href="/webpack/assets/js/16.a016f75b.js"><link rel="prefetch" href="/webpack/assets/js/17.fb62bbd7.js"><link rel="prefetch" href="/webpack/assets/js/18.a4627507.js"><link rel="prefetch" href="/webpack/assets/js/19.e50b0969.js"><link rel="prefetch" href="/webpack/assets/js/3.ed7e4ba9.js"><link rel="prefetch" href="/webpack/assets/js/4.a8f857cd.js"><link rel="prefetch" href="/webpack/assets/js/5.9e0195bc.js"><link rel="prefetch" href="/webpack/assets/js/6.d09cb291.js"><link rel="prefetch" href="/webpack/assets/js/7.93d88a93.js"><link rel="prefetch" href="/webpack/assets/js/8.250207b8.js"><link rel="prefetch" href="/webpack/assets/js/9.ed7d72dc.js">
+    <link rel="stylesheet" href="/webpack/assets/css/0.styles.4cab9dda.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/webpack/" class="home-link router-link-active"><!----> <span class="site-name">webpack 找不到北</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://www.webpackjs.com/guides/getting-started/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack 教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://www.webpackjs.com/guides/getting-started/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  webpack 教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>概述</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webpack/" aria-current="page" class="sidebar-link">了解 webpack</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>配置</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webpack/writeconfig/" aria-current="page" class="sidebar-link">webpack 配置文件</a></li><li><a href="/webpack/writeconfig/io.html" class="sidebar-link">管理输出</a></li><li><a href="/webpack/writeconfig/dev.html" class="sidebar-link">开发</a></li><li><a href="/webpack/writeconfig/hot.html" class="sidebar-link">模块热替换</a></li><li><a href="/webpack/writeconfig/tree.html" class="sidebar-link">Tree Shaking</a></li><li><a href="/webpack/writeconfig/production.html" class="sidebar-link">生产环境搭建</a></li><li><a href="/webpack/writeconfig/split.html" class="sidebar-link">代码分离</a></li><li><a href="/webpack/writeconfig/cache.html" aria-current="page" class="active sidebar-link">缓存</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/webpack/writeconfig/cache.html#输出文件的文件名" class="sidebar-link">输出文件的文件名</a></li><li class="sidebar-sub-header"><a href="/webpack/writeconfig/cache.html#提取样板" class="sidebar-link">提取样板</a></li><li class="sidebar-sub-header"><a href="/webpack/writeconfig/cache.html#将第三方库提出出来" class="sidebar-link">将第三方库提出出来</a></li><li class="sidebar-sub-header"><a href="/webpack/writeconfig/cache.html#模块标识符" class="sidebar-link">模块标识符</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>开发</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webpack/writeLoader/" class="sidebar-link">Loader 开发</a></li><li><a href="/webpack/writePlugin/" class="sidebar-link">Plugin 开发</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Compiler</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webpack/compiler/" class="sidebar-link">Compiler</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Compilation</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webpack/compilation/" class="sidebar-link">Compilation</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="缓存"><a href="#缓存" class="header-anchor">#</a> 缓存</h1> <p>浏览器和服务器为了提高访问速度，都会分别实现自己的缓存机制。在这里我们将通过变化输出的文件名来防止缓存。</p> <h2 id="输出文件的文件名"><a href="#输出文件的文件名" class="header-anchor">#</a> 输出文件的文件名</h2> <p><code>[name]</code> 会被真正的文件名所替换, 其他的含义看下面表格</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token operator">:</span><span class="token punctuation">{</span>
+        app<span class="token operator">:</span> <span class="token string">'./src/index.js'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">{</span>
+        filename<span class="token operator">:</span> <span class="token string">'[name].bundle.[chunkhash:8].js'</span><span class="token punctuation">,</span>
+        chunkFilename<span class="token operator">:</span> <span class="token string">'[name].[contenthash].bundle.js'</span><span class="token punctuation">,</span>
+        path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><table><thead><tr><th>模板</th> <th>描述</th></tr></thead> <tbody><tr><td>[fullhash]</td> <td>编译的所有 hash 值</td></tr> <tr><td>[hash]</td> <td>同上，弃用</td></tr> <tr><td>[id]</td> <td>chunk 的 ID</td></tr> <tr><td>[name]</td> <td>chunk 的名称， 如果未设置则使用 id</td></tr> <tr><td>[chunkhash]</td> <td>chunk 的 hash 值， 包含所有元素</td></tr> <tr><td>[contenthash]</td> <td>chunk 的 hash 值， 只包含内容类型的元素</td></tr></tbody></table> <p>只包含部分内容， 所有内容见 <a href="https://webpack.js.org/configuration/output/#outputfilename" target="_blank" rel="noopener noreferrer">https://webpack.js.org/configuration/output/#outputfilename<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="提取样板"><a href="#提取样板" class="header-anchor">#</a> 提取样板</h2> <p>形如 <code>import('abc').then(res=&gt;{})</code> 这种动态导入的代码，在webpack中即为运行时代码。在代码分离中知道，这种代码会被分离出来。那么还有什么问题呢？</p> <p>缓存问题，加入 abc 模块有更改，那么引用 abc 的代码，编译后的 hash 值也会跟随发生变化，这样的话，明明没有修改的代码，缓存却不能用了，因此，我们需要将包含 chunks 映射关系的list 单独分离出来。</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token operator">:</span><span class="token punctuation">{</span>
+        app<span class="token operator">:</span> <span class="token string">'./src/index.js'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">{</span>
+        filename<span class="token operator">:</span> <span class="token string">'[name].bundle.[chunkhash:8].js'</span><span class="token punctuation">,</span>
+        path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    optimization<span class="token operator">:</span> <span class="token punctuation">{</span>
+        runtimeChunk<span class="token operator">:</span> <span class="token string">'single'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>代码</p> <div class="language-js extra-class"><pre class="language-js"><code>window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token comment">/* webpackChunkName: &quot;lodash&quot; */</span> <span class="token string">&quot;lodash&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span><span class="token keyword">default</span><span class="token operator">:</span> _<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>_<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token number">1.24</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>生成的文件</p> <div class="language- extra-class"><pre class="language-text"><code>app.bundle.15803dd9.js
+runtime.bundle.32130354.js
+lodash.bundle.731c7c29.js
+</code></pre></div><h2 id="将第三方库提出出来"><a href="#将第三方库提出出来" class="header-anchor">#</a> 将第三方库提出出来</h2> <p>像 lodash 等三方的模块，我们几乎不会去修改，那么单独提取出来，会是一个很好的做法</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token operator">:</span><span class="token punctuation">{</span>
+        app<span class="token operator">:</span> <span class="token string">'./src/index.js'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">{</span>
+        filename<span class="token operator">:</span> <span class="token string">'[name].bundle.[chunkhash:8].js'</span><span class="token punctuation">,</span>
+        path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    optimization<span class="token operator">:</span> <span class="token punctuation">{</span>
+        runtimeChunk<span class="token operator">:</span> <span class="token string">'single'</span><span class="token punctuation">,</span>
+        splitChunks<span class="token operator">:</span> <span class="token punctuation">{</span>
+            cacheGroups<span class="token operator">:</span> <span class="token punctuation">{</span>
+                vendor<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    test<span class="token operator">:</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[\\/]node_modules[\\/]</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+                    name<span class="token operator">:</span> <span class="token string">'vendors'</span><span class="token punctuation">,</span>
+                    chunks<span class="token operator">:</span> <span class="token string">'all'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>生成文件</p> <div class="language- extra-class"><pre class="language-text"><code>app.bundle.e5ad9d35.js
+runtime.bundle.d92c5453.js
+vendors.bundle.b6ca0ed5.js
+</code></pre></div><h2 id="模块标识符"><a href="#模块标识符" class="header-anchor">#</a> 模块标识符</h2> <p>因为每个 module.id 会基于默认的解析顺序(resolve order)进行增量。也就是说，当解析顺序发生变化，ID 也会随之改变， hash 也会改变</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token operator">:</span><span class="token punctuation">{</span>
+        app<span class="token operator">:</span> <span class="token string">'./src/index.js'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">{</span>
+        filename<span class="token operator">:</span> <span class="token string">'[name].bundle.[chunkhash:8].js'</span><span class="token punctuation">,</span>
+        path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    optimization<span class="token operator">:</span> <span class="token punctuation">{</span>
+        moduleIds<span class="token operator">:</span> <span class="token string">'hashed'</span><span class="token punctuation">,</span>
+        runtimeChunk<span class="token operator">:</span> <span class="token string">'single'</span><span class="token punctuation">,</span>
+        splitChunks<span class="token operator">:</span> <span class="token punctuation">{</span>
+            cacheGroups<span class="token operator">:</span> <span class="token punctuation">{</span>
+                vendor<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    test<span class="token operator">:</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[\\/]node_modules[\\/]</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+                    name<span class="token operator">:</span> <span class="token string">'vendors'</span><span class="token punctuation">,</span>
+                    chunks<span class="token operator">:</span> <span class="token string">'all'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>用 hash 值来代替模块的引用顺序</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/webpack/writeconfig/split.html" class="prev">
+        代码分离
+      </a></span> <span class="next"><a href="/webpack/writeLoader/">
+        Loader 开发
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/webpack/assets/js/app.ba403774.js" defer></script><script src="/webpack/assets/js/2.86baee49.js" defer></script><script src="/webpack/assets/js/13.ff4f65b5.js" defer></script>
+  </body>
+</html>
