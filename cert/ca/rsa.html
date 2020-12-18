@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>根证书私钥 | OpenSSL 生成证书</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="just a test desc">
+    
+    <link rel="preload" href="/cert/assets/css/0.styles.f7d1b79c.css" as="style"><link rel="preload" href="/cert/assets/js/app.e5e7cfcc.js" as="script"><link rel="preload" href="/cert/assets/js/2.2f45da63.js" as="script"><link rel="preload" href="/cert/assets/js/11.30ec6e08.js" as="script"><link rel="prefetch" href="/cert/assets/js/10.898f7bf4.js"><link rel="prefetch" href="/cert/assets/js/12.cd333d9f.js"><link rel="prefetch" href="/cert/assets/js/13.4ab0bb39.js"><link rel="prefetch" href="/cert/assets/js/14.aa6ec315.js"><link rel="prefetch" href="/cert/assets/js/15.a75d8c42.js"><link rel="prefetch" href="/cert/assets/js/16.20b938b4.js"><link rel="prefetch" href="/cert/assets/js/17.79fdfab9.js"><link rel="prefetch" href="/cert/assets/js/18.cf7d7dae.js"><link rel="prefetch" href="/cert/assets/js/3.64a27229.js"><link rel="prefetch" href="/cert/assets/js/4.89cfc98c.js"><link rel="prefetch" href="/cert/assets/js/5.349dd36a.js"><link rel="prefetch" href="/cert/assets/js/6.eacdcc06.js"><link rel="prefetch" href="/cert/assets/js/7.bb62895b.js"><link rel="prefetch" href="/cert/assets/js/8.fa48f14f.js"><link rel="prefetch" href="/cert/assets/js/9.70d675a7.js">
+    <link rel="stylesheet" href="/cert/assets/css/0.styles.f7d1b79c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/cert/" class="home-link router-link-active"><!----> <span class="site-name">OpenSSL 生成证书</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>概述</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/cert/" aria-current="page" class="sidebar-link">为什么</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>根证书</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/cert/ca/" aria-current="page" class="sidebar-link">概述</a></li><li><a href="/cert/ca/rsa.html" aria-current="page" class="active sidebar-link">创建私钥</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/cert/ca/rsa.html#命令" class="sidebar-link">命令</a></li></ul></li><li><a href="/cert/ca/csr.html" class="sidebar-link">证书请求</a></li><li><a href="/cert/ca/ca.html" class="sidebar-link">创建根证书</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>服务器证书</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/cert/server/" class="sidebar-link">概述</a></li><li><a href="/cert/server/rsa.html" class="sidebar-link">服务器私钥</a></li><li><a href="/cert/server/csr.html" class="sidebar-link">服务器证书请求</a></li><li><a href="/cert/server/crt.html" class="sidebar-link">签发服务器证书</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>部署证书</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/cert/use/" class="sidebar-link">概述</a></li><li><a href="/cert/use/nginx.html" class="sidebar-link">Nginx</a></li><li><a href="/cert/use/iis.html" class="sidebar-link">IIS</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="根证书私钥"><a href="#根证书私钥" class="header-anchor">#</a> 根证书私钥</h1> <p>证书主要使用了非对称加密的方式，在这里我们使用 rsa</p> <h2 id="命令"><a href="#命令" class="header-anchor">#</a> 命令</h2> <div class="language- extra-class"><pre class="language-text"><code>openssl genrsa -aes256 -out ca.key 2048
+</code></pre></div><table><thead><tr><th>参数</th> <th>描述</th></tr></thead> <tbody><tr><td>genrsa</td> <td>使用RSA算法产生私钥</td></tr> <tr><td>-aes256</td> <td>使用256位密钥的AES算法对私钥进行加密</td></tr> <tr><td>-out</td> <td>输出文件的路径</td></tr> <tr><td>2048</td> <td>指定私钥长度</td></tr></tbody></table> <p>在私钥创建结束后，输入 aes256 加密的密码，这个需要记住，在后续的操作中要用到，这里假设是123123</p> <div class="language- extra-class"><pre class="language-text"><code>Generating RSA private key, 2048 bit long modulus
+.+++
+..........+++
+e is 65537 (0x10001)
+Enter pass phrase for ca.key:123123
+Verifying - Enter pass phrase for ca.key:123123
+</code></pre></div><p>私钥内容，实际长度要比这个长很多，为了显示方便只保留几行</p> <div class="language- extra-class"><pre class="language-text"><code>-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-256-CBC,68ED24445CEE11869CC90BD2916C4193
+
+o0tYAXRzsRRld2DOJ65U5NZH0dYvG6jDsMY4aA14+A18NKyAZVRoNvQ5KFV12kxL
+FcH/bpppPb5Yk7GxGWZZLV3VIR+EDj+1d0n3FpnpJxfc2WQAeAah3wW1+vDV3eso
+9XCdxJyQyVXBFKZxg0XgCVmRO9olJvwL0APvtuHeKDeCLvsaoIhg98zEYvEie1p7
++WdtkaphqdzteDhpB+MM/GTpiSJA7K7MmdkJpObtsWiZyWt3m2w6d1DT5p+lADf0
+oKmNRZMDOlQIb8PTr6XiSSTFHPaxKCfvDpC4fQrqgUI9JglHw3xJaRachaTnrdCi
+nknDoYpcgUoHdgZJ83RmbM0N9kW/eyjUaZspYZj026rBbMpyr3VRunQ7PP7tFvXx
+-----END RSA PRIVATE KEY-----
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/cert/ca/" class="prev router-link-active">
+        概述
+      </a></span> <span class="next"><a href="/cert/ca/csr.html">
+        证书请求
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/cert/assets/js/app.e5e7cfcc.js" defer></script><script src="/cert/assets/js/2.2f45da63.js" defer></script><script src="/cert/assets/js/11.30ec6e08.js" defer></script>
+  </body>
+</html>
