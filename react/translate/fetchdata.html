@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>在 react 中如何获取数据 | react 完全不指南</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="just a test desc">
+    
+    <link rel="preload" href="/react/assets/css/0.styles.89e870bd.css" as="style"><link rel="preload" href="/react/assets/js/app.d1c1caf6.js" as="script"><link rel="preload" href="/react/assets/js/2.e20453c7.js" as="script"><link rel="preload" href="/react/assets/js/11.1f0823ab.js" as="script"><link rel="prefetch" href="/react/assets/js/10.7c2bce82.js"><link rel="prefetch" href="/react/assets/js/12.55da0d02.js"><link rel="prefetch" href="/react/assets/js/3.e265b3ec.js"><link rel="prefetch" href="/react/assets/js/4.b1a4361f.js"><link rel="prefetch" href="/react/assets/js/5.370e2021.js"><link rel="prefetch" href="/react/assets/js/6.989796f3.js"><link rel="prefetch" href="/react/assets/js/7.ef37296c.js"><link rel="prefetch" href="/react/assets/js/8.28fab8e1.js"><link rel="prefetch" href="/react/assets/js/9.c4cdda7f.js">
+    <link rel="stylesheet" href="/react/assets/css/0.styles.89e870bd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/react/" class="home-link router-link-active"><!----> <span class="site-name">react 完全不指南</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://zh-hans.reactjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react 教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://zh-hans.reactjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react 教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>概述</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/" aria-current="page" class="sidebar-link">了解 react</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>hooks</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/hooks/hook.html" class="sidebar-link">概述</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>译文</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/translate/fetchdata.html" aria-current="page" class="active sidebar-link">在 react 中如何获取数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#在组件树中哪个位置获取数据" class="sidebar-link">在组件树中哪个位置获取数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#_1-谁对这些数据有兴趣" class="sidebar-link">1. 谁对这些数据有兴趣</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#_2-当从异步请求中获取数据的等待过程中-你希望在哪里显示条件加载指示器-加载指示器、进度条" class="sidebar-link">2. 当从异步请求中获取数据的等待过程中，你希望在哪里显示条件加载指示器（加载指示器、进度条）</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#_3-当请求失败时-希望在哪里显示错误信息" class="sidebar-link">3. 当请求失败时，希望在哪里显示错误信息</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#总结" class="sidebar-link">总结</a></li></ul></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#如何在-react-中获取数据" class="sidebar-link">如何在 React 中获取数据</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#加载状态和错误处理" class="sidebar-link">加载状态和错误处理</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#如何在-react-中使用-axios-获取数据" class="sidebar-link">如何在 React 中使用 AXIOS 获取数据</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#如何在-react-中测试数据获取" class="sidebar-link">如何在 React 中测试数据获取？</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#如何在-react-中使用-async-await-获取数据" class="sidebar-link">如何在 React 中使用 ASYNC/AWAIT 获取数据？</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#如何在高阶组件中获取数据" class="sidebar-link">如何在高阶组件中获取数据？</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#如何在-render-props-中获取数据" class="sidebar-link">如何在 render props 中获取数据</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#如何在-react-中从-graphql-api-获取数据" class="sidebar-link">如何在 React 中从 GRAPHQL API 获取数据？</a></li><li class="sidebar-sub-header"><a href="/react/translate/fetchdata.html#最后" class="sidebar-link">最后</a></li></ul></li><li><a href="/react/translate/fetchdatahook.html" class="sidebar-link">如何在 React Hooks 中获取数据</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>未整理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/nofenlei/context.html" class="sidebar-link">上下文</a></li><li><a href="/react/nofenlei/funcref.html" class="sidebar-link">函数式组件的ref</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="在-react-中如何获取数据"><a href="#在-react-中如何获取数据" class="header-anchor">#</a> 在 react 中如何获取数据</h1> <blockquote><p>翻译自：https://www.robinwieruch.de/react-fetching-data</p></blockquote> <p>React 的新手通常从不需要获取数据的项目开始。通常他们会面对像 Counter、Todo 或 TicTacToe 应用程序。这很好，因为在 React 迈出第一步时，获取数据将会为应用增加另一层复杂度。</p> <p>但是，有时你希望从自己或第三方的 api 获取真实数据。这篇文章将带你演练在 React 中获取数据。在这里不会使用像 redux 或 mobx 这样的外部状态管理方案来存储你获取的数据。相反，你将使用 react 的本地状态管理。</p> <h2 id="在组件树中哪个位置获取数据"><a href="#在组件树中哪个位置获取数据" class="header-anchor">#</a> 在组件树中哪个位置获取数据</h2> <p>假设您已经有一个组件树，其层次结构中有多个级别的组件。 现在您将要从第三方 API 获取项目列表。 您的组件层次结构中的哪个层级，更准确地说，现在应该在哪个特定组件中获取数据？ 基本上它取决于三个标准：</p> <h3 id="_1-谁对这些数据有兴趣"><a href="#_1-谁对这些数据有兴趣" class="header-anchor">#</a> 1. 谁对这些数据有兴趣</h3> <p>获取数据的组件应该是所有的这些组件的公共父组件</p> <div class="language- extra-class"><pre class="language-text"><code>                      +---------------+
+                      |               |
+                      |               |
+                      |               |
+                      |               |
+                      +------+--------+
+                             |
+                   +---------+------------+
+                   |                      |
+                   |                      |
+           +-------+-------+     +--------+------+
+           |               |     |               |
+           |               |     |               |
+           |  Fetch here!  |     |               |
+           |               |     |               |
+           +-------+-------+     +---------------+
+                   |
+       +-----------+----------+---------------------+
+       |                      |                     |
+       |                      |                     |
++------+--------+     +-------+-------+     +-------+-------+
+|               |     |               |     |               |
+|               |     |               |     |               |
+|    I am!      |     |               |     |     I am!     |
+|               |     |               |     |               |
++---------------+     +-------+-------+     +---------------+
+                              |
+                              |
+                              |
+                              |
+                      +-------+-------+
+                      |               |
+                      |               |
+                      |     I am!     |
+                      |               |
+                      +---------------+
+</code></pre></div><h3 id="_2-当从异步请求中获取数据的等待过程中-你希望在哪里显示条件加载指示器-加载指示器、进度条"><a href="#_2-当从异步请求中获取数据的等待过程中-你希望在哪里显示条件加载指示器-加载指示器、进度条" class="header-anchor">#</a> 2. 当从异步请求中获取数据的等待过程中，你希望在哪里显示条件加载指示器（加载指示器、进度条）</h3> <p>加载指示器应该在第一个标准的公共父组件中显示，那么仍然应该在公共父组件中获取数据</p> <div class="language- extra-class"><pre class="language-text"><code>                      +---------------+
+                      |               |
+                      |               |
+                      |               |
+                      |               |
+                      +------+--------+
+                             |
+                   +---------+------------+
+                   |                      |
+                   |                      |
+           +-------+-------+     +--------+------+
+           |               |     |               |
+           |               |     |               |
+           |  Fetch here!  |     |               |
+           |  Loading ...  |     |               |
+           +-------+-------+     +---------------+
+                   |
+       +-----------+----------+---------------------+
+       |                      |                     |
+       |                      |                     |
++------+--------+     +-------+-------+     +-------+-------+
+|               |     |               |     |               |
+|               |     |               |     |               |
+|    I am!      |     |               |     |     I am!     |
+|               |     |               |     |               |
++---------------+     +-------+-------+     +---------------+
+                              |
+                              |
+                              |
+                              |
+                      +-------+-------+
+                      |               |
+                      |               |
+                      |     I am!     |
+                      |               |
+                      +---------------+
+</code></pre></div><p>但是当加载指示器应该显示在更顶级的组件中时，数据获取需要被提升到这个组件。</p> <div class="language- extra-class"><pre class="language-text"><code>                      +---------------+
+                      |               |
+                      |               |
+                      |  Fetch here!  |
+                      |  Loading ...  |
+                      +------+--------+
+                             |
+                   +---------+------------+
+                   |                      |
+                   |                      |
+           +-------+-------+     +--------+------+
+           |               |     |               |
+           |               |     |               |
+           |               |     |               |
+           |               |     |               |
+           +-------+-------+     +---------------+
+                   |
+       +-----------+----------+---------------------+
+       |                      |                     |
+       |                      |                     |
++------+--------+     +-------+-------+     +-------+-------+
+|               |     |               |     |               |
+|               |     |               |     |               |
+|    I am!      |     |               |     |     I am!     |
+|               |     |               |     |               |
++---------------+     +-------+-------+     +---------------+
+                              |
+                              |
+                              |
+                              |
+                      +-------+-------+
+                      |               |
+                      |               |
+                      |     I am!     |
+                      |               |
+                      +---------------+
+</code></pre></div><p>当加载指示器应该显示在公共父组件的子组件中时，不一定是需要数据的组件，公共父组件仍然是获取数据的组件。 然后可以将加载指示器状态传递给所有有兴趣显示加载指示器的子组件。</p> <div class="language- extra-class"><pre class="language-text"><code>                      +---------------+
+                      |               |
+                      |               |
+                      |               |
+                      |               |
+                      +------+--------+
+                             |
+                   +---------+------------+
+                   |                      |
+                   |                      |
+           +-------+-------+     +--------+------+
+           |               |     |               |
+           |               |     |               |
+           |  Fetch here!  |     |               |
+           |               |     |               |
+           +-------+-------+     +---------------+
+                   |
+       +-----------+----------+---------------------+
+       |                      |                     |
+       |                      |                     |
++------+--------+     +-------+-------+     +-------+-------+
+|               |     |               |     |               |
+|               |     |               |     |               |
+|    I am!      |     |               |     |     I am!     |
+|  Loading ...  |     |  Loading ...  |     |  Loading ...  |
++---------------+     +-------+-------+     +---------------+
+                              |
+                              |
+                              |
+                              |
+                      +-------+-------+
+                      |               |
+                      |               |
+                      |     I am!     |
+                      |               |
+                      +---------------+
+</code></pre></div><h3 id="_3-当请求失败时-希望在哪里显示错误信息"><a href="#_3-当请求失败时-希望在哪里显示错误信息" class="header-anchor">#</a> 3. 当请求失败时，希望在哪里显示错误信息</h3> <p>这里和第二个标准的加载指示器规则相同</p> <h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <p>这基本上就是在所有组件的层次中获取数据的所有内容了。但是，在公共父组件达成一致后，何时获取数据以及如何获取数据呢?</p> <h2 id="如何在-react-中获取数据"><a href="#如何在-react-中获取数据" class="header-anchor">#</a> 如何在 React 中获取数据</h2> <p>React 的 ES6 类组件有生命周期方法。<code>render()</code> 生命周期方法是必须输出 React 元素的，因为毕竟您可能希望在某些时候显示所获取的数据。</p> <p>还有另一种生命周期方法非常适合获取数据：<code>componentDidMount()</code>。当这个方法运行时，组件已经用 <code>render()</code> 方法渲染了一次，但是当获取的数据通过 <code>setState()</code> 存储在组件的本地状态时，它会再次渲染。之后，可以在 <code>render()</code> 方法中使用本地状态来显示它或将其作为 <code>props</code> 传递。</p> <p><code>componentDidMount()</code> 生命周期方法是获取数据的最佳位置。 但究竟如何获取数据呢？ React 的生态系统是一个灵活的框架，因此您可以选择自己的解决方案来获取数据。 为简单起见，本文将使用浏览器自带的原生 <code>fetch</code> API 来展示。 它使用 JavaScript 承诺来解决异步响应。 获取数据的最小示例如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      data<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://api.mydomain.com'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> data <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>这是最基本的 React.js <code>fetch</code> API 示例。 它向您展示了如何从 API 获取 React 中的 <code>JSON</code>。 但是，本文将使用真实世界的第三方 API 来演示它：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">API</span> <span class="token operator">=</span> <span class="token string">'https://hn.algolia.com/api/v1/search?query='</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">DEFAULT_QUERY</span> <span class="token operator">=</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      hits<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> hits<span class="token operator">:</span> data<span class="token punctuation">.</span>hits <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>该示例使用 Hacker News API，但您可以随意使用您自己的 API 。 当数据获取成功时，它会通过 React 的 <code>this.setState()</code> 方法存储在本地状态中。 然后 <code>render()</code> 方法将再次触发，您可以显示获取的数据。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+ <span class="token operator">...</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> hits <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span>hits<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">hit</span> <span class="token operator">=&gt;</span>
+          <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>objectID<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>url<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>即使 <code>render()</code> 方法在 <code>componentDidMount()</code> 方法之前已经运行过一次，您也不会遇到任何空指针异常，因为您已经使用空数组初始化了本地状态中的 <code>hits</code> 属性。</p> <blockquote><p>注意：如果您想了解使用名为 React Hooks 的功能获取数据，请查看此综合教程：<a href="https://www.robinwieruch.de/react-hooks-fetch-data/" target="_blank" rel="noopener noreferrer">如何使用 React Hooks 获取数据？<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h2 id="加载状态和错误处理"><a href="#加载状态和错误处理" class="header-anchor">#</a> 加载状态和错误处理</h2> <p>当然，你需要在本地保存获取到的数据，但还有什么呢？你还可以在状态中保存另外两个属性：加载状态和错误状态；两者都会改善你的应用终端用户的用户体验</p> <p>加载状态应该用于指示正在发生异步请求。 在两个 <code>render()</code> 方法之间，由于异步到达，获取的数据处于挂起状态。 因此，您可以在等待期间添加加载指示器。 在您的获取生命周期方法中，您必须将属性从 <code>false</code> 切换为 <code>true</code>，以及何时将数据从 <code>true</code> 切换为 <code>false</code>。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      hits<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isLoading<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> hits<span class="token operator">:</span> data<span class="token punctuation">.</span>hits<span class="token punctuation">,</span> isLoading<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>在您的 <code>render()</code> 方法中，您可以使用 <a href="https://www.robinwieruch.de/conditional-rendering-react" target="_blank" rel="noopener noreferrer">React 的条件渲染<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 来显示加载指示器或解析的数据。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> hits<span class="token punctuation">,</span> isLoading <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Loading <span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span>hits<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">hit</span> <span class="token operator">=&gt;</span>
+          <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>objectID<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>url<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>加载指示器可以像 Loading... 一样简单，但您也可以使用第三方库来显示加载指示器或 <a href="https://github.com/danilowoz/react-content-loader" target="_blank" rel="noopener noreferrer">挂起的内容组件<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。 由你向终端用户发出数据加载中的信号。</p> <p>您可以在本地状态中保存的第二个状态是错误状态。 当您的应用程序中发生错误时，没有什么比不向您的用户提供有关错误的指示更糟糕的了。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      hits<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      error<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>使用 promise 时，通常在 then() 块之后使用 catch() 块来处理错误。 这就是它可以用于原生 fetch API 的原因</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  <span class="token operator">...</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isLoading<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> hits<span class="token operator">:</span> data<span class="token punctuation">.</span>hits<span class="token punctuation">,</span> isLoading<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> error<span class="token punctuation">,</span> isLoading<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>不幸的是，<code>fetch</code> API 不会为每个错误的状态代码使用它的 <code>catch</code> 块。 例如，当 HTTP 404 发生时，它不会进入 <code>catch</code> 块。 但是，当您的响应与预期数据不匹配时，您可以通过抛出错误来强制它运行到 <code>catch</code> 块中。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  <span class="token operator">...</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isLoading<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Something went wrong ...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> hits<span class="token operator">:</span> data<span class="token punctuation">.</span>hits<span class="token punctuation">,</span> isLoading<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> error<span class="token punctuation">,</span> isLoading<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>最后但并非最不重要的一点是，您可以再次将 <code>render()</code> 方法中的错误消息显示为条件渲染。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  <span class="token operator">...</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> hits<span class="token punctuation">,</span> isLoading<span class="token punctuation">,</span> error <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>error<span class="token punctuation">.</span>message<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Loading <span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span>hits<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">hit</span> <span class="token operator">=&gt;</span>
+          <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>objectID<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>url<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>以上就是使用简单的 React 进行数据获取的基础知识。你可以在 React 的本地状态或库(如<a href="https://roadtoredux.com/" target="_blank" rel="noopener noreferrer">Redux 之路<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>)中阅读更多关于管理获取数据的内容。</p> <h2 id="如何在-react-中使用-axios-获取数据"><a href="#如何在-react-中使用-axios-获取数据" class="header-anchor">#</a> 如何在 React 中使用 AXIOS 获取数据</h2> <p>如前所述，您可以用另一个库替换 <code>fetch API</code>。 例如，另一个库可能会针对每个进入 catch 块的错误请求自行运行，而您不必首先抛出错误。 作为获取数据的库的一个很好的候选者是 <code>axios</code>。 您可以使用 <code>npm install axios</code> 在您的项目中安装 axios，然后在您的项目中使用它代替 <code>fetch API</code>。 让我们重构之前的项目，使用 <code>axios</code> 代替原生的 <code>fetch API</code> 在 React 中请求数据。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">API</span> <span class="token operator">=</span> <span class="token string">'https://hn.algolia.com/api/v1/search?query='</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">DEFAULT_QUERY</span> <span class="token operator">=</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      hits<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      error<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isLoading<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">result</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        hits<span class="token operator">:</span> result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>hits<span class="token punctuation">,</span>
+        isLoading<span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        error<span class="token punctuation">,</span>
+        isLoading<span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>如你所见， <code>axios</code> 也返回一个 <code>promise</code>。但这一次你不必两次解析 <code>promise</code>，因为 <code>axios</code> 已经为你返回了 <code>JSON</code> 响应。此外，在使用 <code>axios</code> 时，你可以确保所有的错误都在 <code>catch()</code> 块中捕获，另外，需要对返回的 <code>axios</code> 数据稍微调整数据结构</p> <p>前面的示例仅向您展示了如何使用 React 的 <code>componentDidMount</code> 生命周期方法中的 <code>HTTP GET</code> 方法从 API 中获取数据。 但是，您也可以通过单击按钮主动请求数据。 那么你不会使用生命周期方法，而是你自己的类方法。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">API</span> <span class="token operator">=</span> <span class="token string">'https://hn.algolia.com/api/v1/search?query='</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">DEFAULT_QUERY</span> <span class="token operator">=</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      hits<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      error<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">getStories</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isLoading<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">result</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        hits<span class="token operator">:</span> result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>hits<span class="token punctuation">,</span>
+        isLoading<span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        error<span class="token punctuation">,</span>
+        isLoading<span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>但这只是 React 中的 <code>GET</code> 方法。 将数据写入 API 怎么样？ 当有 <code>axios</code> 时，你也可以在 React 中做一个 <code>post</code> 请求。 您只需要将 <code>axios.get()</code> 与 <code>axios.post()</code> 交换。</p> <h2 id="如何在-react-中测试数据获取"><a href="#如何在-react-中测试数据获取" class="header-anchor">#</a> 如何在 React 中测试数据获取？</h2> <p>那么如何测试来自 React 组件的数据请求呢？ 有一个关于这个主题的广泛的 React 测试教程，但这里是简而言之。 当你使用 <code>create-react-app</code> 设置你的应用程序时，它已经带有 Jest 作为测试运行器和断言库。 否则，您也可以将 Mocha（测试运行程序）和 Chai（断言库）用于这些目的（请记住，测试运行程序和断言的功能那时会有所不同）。</p> <p>在测试 React 组件时，我经常使用 Enzyme 来渲染我的测试用例中的组件。 此外，在测试异步数据获取时，Sinon 有助于监视和模拟数据。</p> <div class="language- extra-class"><pre class="language-text"><code>npm install enzyme enzyme-adapter-react-16 sinon --save-dev
+</code></pre></div><p>完成测试设置后，您可以为 React 场景中的数据请求编写第一个测试套件。</p> <div class="language-js extra-class"><pre class="language-js"><code>mport React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> sinon <span class="token keyword">from</span> <span class="token string">'sinon'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> mount<span class="token punctuation">,</span> configure<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'enzyme'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Adapter <span class="token keyword">from</span> <span class="token string">'enzyme-adapter-react-16'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./'</span><span class="token punctuation">;</span>
+
+<span class="token function">configure</span><span class="token punctuation">(</span><span class="token punctuation">{</span> adapter<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Adapter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'App'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">beforeAll</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">afterAll</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'renders data when it fetched data successfully'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">done</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'stores data in local state'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">done</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>一个测试用例应该显示数据在获取数据后在 React 组件中成功渲染，而另一个测试验证数据是否存储在本地状态中。 也许测试这两种情况都是多余的，因为在渲染数据时，它也应该存储在本地状态中，但是为了演示它，您将看到两个用例。</p> <p>在所有测试之前，您希望使用模拟数据保存您的 axios 请求。 您可以为它创建自己的 promise，并在以后使用它来对其解析功能进行细粒度控制。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'App'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">{</span>
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+      hits<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> objectID<span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span> url<span class="token operator">:</span> <span class="token string">'https://blog.com/hello'</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'hello'</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> objectID<span class="token operator">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span> url<span class="token operator">:</span> <span class="token string">'https://blog.com/there'</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'there'</span><span class="token punctuation">,</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> promise <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">beforeAll</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    sinon
+      <span class="token punctuation">.</span><span class="token function">stub</span><span class="token punctuation">(</span>axios<span class="token punctuation">,</span> <span class="token string">'get'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">withArgs</span><span class="token punctuation">(</span><span class="token string">'https://hn.algolia.com/api/v1/search?query=redux'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">returns</span><span class="token punctuation">(</span>promise<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">afterAll</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    axios<span class="token punctuation">.</span>get<span class="token punctuation">.</span><span class="token function">restore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在所有测试之后，您应该确保再次从 axios 中删除存根。 这就是异步数据获取测试设置。 现在让我们实现第一个测试：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'App'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'stores data in local state'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">done</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> wrapper <span class="token operator">=</span> <span class="token function">mount</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">expect</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">state</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>hits<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    promise<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      wrapper<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token function">expect</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">state</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>hits<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>hits<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在测试中，您开始使用 Enzyme 的 mount() 函数渲染 React 组件，该函数确保执行所有生命周期方法并渲染所有子组件。 最初，您可以将您的命中断言作为组件本地状态中的空数组。 这应该是正确的，因为您使用一个空数组为 hits 属性初始化了本地状态。 一旦您实现了 promise 并手动触发了组件的渲染，状态应该在数据获取后发生了变化。</p> <p>接下来，您可以测试是否所有内容都相应地渲染。 测试与之前的测试类似：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'App'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'renders data when it fetched data successfully'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">done</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> wrapper <span class="token operator">=</span> <span class="token function">mount</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">expect</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span><span class="token string">'Loading ...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    promise<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      wrapper<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token function">expect</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveLength</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在开始测试之前，加载指示器应该被渲染。同样的，一旦完成了 promise 并手动触发了组件的渲染，所请求的数据应该有两个列表数据。</p> <p>这基本上是您在 React 中测试数据获取需要了解的内容。 它不需要很复杂。 通过您自己的 promise，您可以细粒度控制何时解决 promise 以及何时更新组件。 之后，您可以进行断言。 前面显示的测试场景只是一种方法。 例如，对于测试工具，您不一定需要使用 Sinon 和 Enzyme。</p> <h2 id="如何在-react-中使用-async-await-获取数据"><a href="#如何在-react-中使用-async-await-获取数据" class="header-anchor">#</a> 如何在 React 中使用 ASYNC/AWAIT 获取数据？</h2> <p>到目前为止，你只使用了 promise 的 then() 和 catch() 处理请求，javascript 的下一代异步请求怎么用？让我们将前面在 react 的获取数据实例重构为 async/await</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">API</span> <span class="token operator">=</span> <span class="token string">'https://hn.algolia.com/api/v1/search?query='</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">DEFAULT_QUERY</span> <span class="token operator">=</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+
+  <span class="token keyword">async</span> <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isLoading<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        hits<span class="token operator">:</span> result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>hits<span class="token punctuation">,</span>
+        isLoading<span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        error<span class="token punctuation">,</span>
+        isLoading<span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p>在 React 中获取数据时，您可以使用 async/await 语句代替 then()。 async 语句用于表示函数是异步执行的。 它也可以用于 (React) 类组件的方法。 每当异步执行某些内容时，就会在 async 函数中使用 await 语句。 因此，在等待的请求解决之前，不会执行下一行。 此外，如果请求失败，可以使用 try 和 catch 块来捕获错误。</p> <h2 id="如何在高阶组件中获取数据"><a href="#如何在高阶组件中获取数据" class="header-anchor">#</a> 如何在高阶组件中获取数据？</h2> <p>之前展示的获取数据的方法在许多组件中使用时可能会重复。 组件挂载后，您希望获取数据并根据条件显示加载或错误指示器。 到目前为止，该组件可以分为两个职责：使用条件渲染显示获取的数据和获取远程数据，然后将其存储在本地状态。 前者仅用于渲染目的，后者可以由<a href="https://www.robinwieruch.de/react-higher-order-components/" target="_blank" rel="noopener noreferrer">高阶组件<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>重用。</p> <blockquote><p>注意：当您要阅读链接的文章时，您还将看到如何抽象出高阶组件中的条件渲染。 之后，您的组件将只关心显示获取的数据，而无需任何条件渲染。</p></blockquote> <p>那么你将如何引入这种抽象的高阶组件来为你处理 React 中的数据获取。 首先，您必须将所有获取和状态逻辑分离到一个更高阶的组件中。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">withFetching</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token parameter">Component</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  <span class="token keyword">class</span> <span class="token class-name">WithFetching</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+        data<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        error<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isLoading<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      axios
+        <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            data<span class="token operator">:</span> result<span class="token punctuation">.</span>data<span class="token punctuation">,</span>
+            isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            error<span class="token punctuation">,</span>
+            isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>Component <span class="token punctuation">{</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>除了渲染之外，高阶组件中的所有其他内容都取自前一个组件，在该组件中数据获取发生在该组件中。 此外，高阶组件接收将用于请求数据的 url。 如果稍后需要将更多查询参数传递给高阶组件，则始终可以扩展函数签名中的参数。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">withFetching</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> query</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token parameter">Comp</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  <span class="token operator">...</span>
+</code></pre></div><p>此外，高阶组件在本地状态中使用称为数据的通用数据容器。 它不再像以前一样知道特定的属性命名（例如 hits）。</p> <p>在第二步中，您可以处理来自 App 组件的所有获取和状态逻辑。 因为它不再有本地状态或生命周期方法，您可以将其重构为功能性无状态组件。 传入属性从特定命中更改为通用数据属性。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> data<span class="token punctuation">,</span> isLoading<span class="token punctuation">,</span> error <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>No data yet <span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>error<span class="token punctuation">.</span>message<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>isLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Loading <span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span>data<span class="token punctuation">.</span>hits<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">hit</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>objectID<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>url<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>最后但并非最不重要的是，您可以使用高阶组件来包装您的 App 组件。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token constant">API</span> <span class="token operator">=</span> <span class="token string">'https://hn.algolia.com/api/v1/search?query='</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">DEFAULT_QUERY</span> <span class="token operator">=</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+
+<span class="token operator">...</span>
+
+<span class="token keyword">const</span> AppWithFetch <span class="token operator">=</span> <span class="token function">withFetching</span><span class="token punctuation">(</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">)</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>基本上就是抽象出 React 中获取的数据。 通过使用高阶组件来获取数据，您可以轻松地为具有任何终端 API url 的任何组件选择加入此功能。 此外，您可以使用前面显示的查询参数对其进行扩展。</p> <h2 id="如何在-render-props-中获取数据"><a href="#如何在-render-props-中获取数据" class="header-anchor">#</a> 如何在 render props 中获取数据</h2> <p>高阶组件的另一种方式是 React 中的 render prop 组件。 也可以使用 render prop 组件在 React 中获取声明性数据。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Fetcher</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      data<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      error<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isLoading<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    axios
+      <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          data<span class="token operator">:</span> result<span class="token punctuation">.</span>data<span class="token punctuation">,</span>
+          isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          error<span class="token punctuation">,</span>
+          isLoading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>然后，您将能够在您的 App 组件中以以下方式使用 render props 组件：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token constant">API</span> <span class="token operator">=</span> <span class="token string">'https://hn.algolia.com/api/v1/search?query='</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">DEFAULT_QUERY</span> <span class="token operator">=</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+
+<span class="token operator">...</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">RenderPropApproach</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  <span class="token operator">&lt;</span>Fetcher url<span class="token operator">=</span><span class="token punctuation">{</span><span class="token constant">API</span> <span class="token operator">+</span> <span class="token constant">DEFAULT_QUERY</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> data<span class="token punctuation">,</span> isLoading<span class="token punctuation">,</span> error <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>No data yet <span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>error<span class="token punctuation">.</span>message<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>isLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>Loading <span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+          <span class="token punctuation">{</span>data<span class="token punctuation">.</span>hits<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">hit</span> <span class="token operator">=&gt;</span>
+            <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>objectID<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>url<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>hit<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+          <span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Fetcher<span class="token operator">&gt;</span>
+</code></pre></div><p>通过使用 React 的 children 属性作为渲染属性，您可以从 Fetcher 组件传递所有本地状态。 这就是您可以在 render props 组件中进行所有条件渲染和最终渲染的方式。</p> <h2 id="如何在-react-中从-graphql-api-获取数据"><a href="#如何在-react-中从-graphql-api-获取数据" class="header-anchor">#</a> 如何在 React 中从 GRAPHQL API 获取数据？</h2> <p>最后但并非最不重要的一点是，这篇文章应该简短地提到 React 的 GraphQL API。 您将如何从 GraphQL API 而非 React 组件的 REST API（您目前使用过）获取数据？ 基本上可以用同样的方式实现，因为 GraphQL 对网络层没有自以为是。 大多数 GraphQL API 都通过 HTTP 公开，无论是否可以使用本机 fetch API 或 axios 查询它们。 如果您对如何在 React 中从 GraphQL API 获取数据感兴趣，请转到这篇文章：<a href="https://www.robinwieruch.de/react-with-graphql-tutorial/" target="_blank" rel="noopener noreferrer">完整的 React 与 GraphQL 教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <h2 id="最后"><a href="#最后" class="header-anchor">#</a> 最后</h2> <p>您可以在此 <a href="https://github.com/rwieruch/react-data-fetching" target="_blank" rel="noopener noreferrer">GitHub 存储库<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 中找到完成的项目。 对于 React 中的数据获取，您还有其他建议吗？ 请联系我。 如果您将这篇文章分享给其他人以了解 React 中的数据获取，这对我来说意义重大。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/hooks/hook.html" class="prev">
+        概述
+      </a></span> <span class="next"><a href="/react/translate/fetchdatahook.html">
+        如何在 React Hooks 中获取数据
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/react/assets/js/app.d1c1caf6.js" defer></script><script src="/react/assets/js/2.e20453c7.js" defer></script><script src="/react/assets/js/11.1f0823ab.js" defer></script>
+  </body>
+</html>

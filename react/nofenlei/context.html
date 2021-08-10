@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>上下文 | react 完全不指南</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="just a test desc">
+    
+    <link rel="preload" href="/react/assets/css/0.styles.89e870bd.css" as="style"><link rel="preload" href="/react/assets/js/app.d1c1caf6.js" as="script"><link rel="preload" href="/react/assets/js/2.e20453c7.js" as="script"><link rel="preload" href="/react/assets/js/9.c4cdda7f.js" as="script"><link rel="prefetch" href="/react/assets/js/10.7c2bce82.js"><link rel="prefetch" href="/react/assets/js/11.1f0823ab.js"><link rel="prefetch" href="/react/assets/js/12.55da0d02.js"><link rel="prefetch" href="/react/assets/js/3.e265b3ec.js"><link rel="prefetch" href="/react/assets/js/4.b1a4361f.js"><link rel="prefetch" href="/react/assets/js/5.370e2021.js"><link rel="prefetch" href="/react/assets/js/6.989796f3.js"><link rel="prefetch" href="/react/assets/js/7.ef37296c.js"><link rel="prefetch" href="/react/assets/js/8.28fab8e1.js">
+    <link rel="stylesheet" href="/react/assets/css/0.styles.89e870bd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/react/" class="home-link router-link-active"><!----> <span class="site-name">react 完全不指南</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://zh-hans.reactjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react 教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://zh-hans.reactjs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  react 教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>概述</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/" aria-current="page" class="sidebar-link">了解 react</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>hooks</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/hooks/hook.html" class="sidebar-link">概述</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>译文</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/translate/fetchdata.html" class="sidebar-link">在 react 中如何获取数据</a></li><li><a href="/react/translate/fetchdatahook.html" class="sidebar-link">如何在 React Hooks 中获取数据</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>未整理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/nofenlei/context.html" aria-current="page" class="active sidebar-link">上下文</a></li><li><a href="/react/nofenlei/funcref.html" class="sidebar-link">函数式组件的ref</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="上下文"><a href="#上下文" class="header-anchor">#</a> 上下文</h1> <p>关于多个消费</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> CustomerContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token string">&quot;2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Provide</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>CustomerContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token string">&quot;2&quot;</span><span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>CustomerContext<span class="token punctuation">.</span>Provider<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">withCustomer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">Component</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> context <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useContext</span><span class="token punctuation">(</span>CustomerContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>Component <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span> some<span class="token operator">=</span><span class="token punctuation">{</span>context<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>如果是 <code>class</code> 组件的话</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">withCustomer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">Component</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> React<span class="token punctuation">.</span>Component <span class="token punctuation">{</span>
+        <span class="token keyword">static</span> contextType <span class="token operator">=</span> CustomerContext<span class="token punctuation">;</span>
+        <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token operator">&lt;</span>Component <span class="token punctuation">{</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">}</span> some<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>context<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><blockquote><p>切记，高阶组价需要注意 <code>forwardRef</code></p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/translate/fetchdatahook.html" class="prev">
+        如何在 React Hooks 中获取数据
+      </a></span> <span class="next"><a href="/react/nofenlei/funcref.html">
+        函数式组件的ref
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/react/assets/js/app.d1c1caf6.js" defer></script><script src="/react/assets/js/2.e20453c7.js" defer></script><script src="/react/assets/js/9.c4cdda7f.js" defer></script>
+  </body>
+</html>
