@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>配置链接 | react navigation 5.x</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="试试">
+    
+    <link rel="preload" href="/reactnavigation/assets/css/0.styles.c084512d.css" as="style"><link rel="preload" href="/reactnavigation/assets/js/app.06c5ad1f.js" as="script"><link rel="preload" href="/reactnavigation/assets/js/2.1931d008.js" as="script"><link rel="preload" href="/reactnavigation/assets/js/72.87246514.js" as="script"><link rel="preload" href="/reactnavigation/assets/js/6.2a89f9f8.js" as="script"><link rel="prefetch" href="/reactnavigation/assets/js/10.55a310bb.js"><link rel="prefetch" href="/reactnavigation/assets/js/11.449a3349.js"><link rel="prefetch" href="/reactnavigation/assets/js/12.24a1d69e.js"><link rel="prefetch" href="/reactnavigation/assets/js/13.2965d5a8.js"><link rel="prefetch" href="/reactnavigation/assets/js/14.bfd37c2e.js"><link rel="prefetch" href="/reactnavigation/assets/js/15.68ab63f5.js"><link rel="prefetch" href="/reactnavigation/assets/js/16.0f72e130.js"><link rel="prefetch" href="/reactnavigation/assets/js/17.16594635.js"><link rel="prefetch" href="/reactnavigation/assets/js/18.dca2d259.js"><link rel="prefetch" href="/reactnavigation/assets/js/19.905865f4.js"><link rel="prefetch" href="/reactnavigation/assets/js/20.a342ac55.js"><link rel="prefetch" href="/reactnavigation/assets/js/21.eb7d985e.js"><link rel="prefetch" href="/reactnavigation/assets/js/22.b0a31519.js"><link rel="prefetch" href="/reactnavigation/assets/js/23.a857375c.js"><link rel="prefetch" href="/reactnavigation/assets/js/24.c422b0dd.js"><link rel="prefetch" href="/reactnavigation/assets/js/25.403cbf65.js"><link rel="prefetch" href="/reactnavigation/assets/js/26.d0c2f3cb.js"><link rel="prefetch" href="/reactnavigation/assets/js/27.de7e9625.js"><link rel="prefetch" href="/reactnavigation/assets/js/28.1f56c73d.js"><link rel="prefetch" href="/reactnavigation/assets/js/29.332a2e1d.js"><link rel="prefetch" href="/reactnavigation/assets/js/3.949cae60.js"><link rel="prefetch" href="/reactnavigation/assets/js/30.089ad555.js"><link rel="prefetch" href="/reactnavigation/assets/js/31.a9c7faf7.js"><link rel="prefetch" href="/reactnavigation/assets/js/32.be1711e2.js"><link rel="prefetch" href="/reactnavigation/assets/js/33.be19c74b.js"><link rel="prefetch" href="/reactnavigation/assets/js/34.d95a8dc0.js"><link rel="prefetch" href="/reactnavigation/assets/js/35.509ef6d2.js"><link rel="prefetch" href="/reactnavigation/assets/js/36.fdfcc2eb.js"><link rel="prefetch" href="/reactnavigation/assets/js/37.a21729c7.js"><link rel="prefetch" href="/reactnavigation/assets/js/38.82468988.js"><link rel="prefetch" href="/reactnavigation/assets/js/39.d0b2ed34.js"><link rel="prefetch" href="/reactnavigation/assets/js/4.67058592.js"><link rel="prefetch" href="/reactnavigation/assets/js/40.be1d77fd.js"><link rel="prefetch" href="/reactnavigation/assets/js/41.d6c76715.js"><link rel="prefetch" href="/reactnavigation/assets/js/42.400b9afe.js"><link rel="prefetch" href="/reactnavigation/assets/js/43.c787c282.js"><link rel="prefetch" href="/reactnavigation/assets/js/44.eed57f85.js"><link rel="prefetch" href="/reactnavigation/assets/js/45.86cb221d.js"><link rel="prefetch" href="/reactnavigation/assets/js/46.e238f601.js"><link rel="prefetch" href="/reactnavigation/assets/js/47.67b39a5f.js"><link rel="prefetch" href="/reactnavigation/assets/js/48.155a4369.js"><link rel="prefetch" href="/reactnavigation/assets/js/49.048d93be.js"><link rel="prefetch" href="/reactnavigation/assets/js/5.9d839219.js"><link rel="prefetch" href="/reactnavigation/assets/js/50.e5b2601f.js"><link rel="prefetch" href="/reactnavigation/assets/js/51.caba7691.js"><link rel="prefetch" href="/reactnavigation/assets/js/52.e9dbf56a.js"><link rel="prefetch" href="/reactnavigation/assets/js/53.0b284ab0.js"><link rel="prefetch" href="/reactnavigation/assets/js/54.3f286670.js"><link rel="prefetch" href="/reactnavigation/assets/js/55.2b5c3b06.js"><link rel="prefetch" href="/reactnavigation/assets/js/56.9d8ebc8c.js"><link rel="prefetch" href="/reactnavigation/assets/js/57.45da38ac.js"><link rel="prefetch" href="/reactnavigation/assets/js/58.4ff7663f.js"><link rel="prefetch" href="/reactnavigation/assets/js/59.da6ed64f.js"><link rel="prefetch" href="/reactnavigation/assets/js/60.49c01b37.js"><link rel="prefetch" href="/reactnavigation/assets/js/61.0168ffd9.js"><link rel="prefetch" href="/reactnavigation/assets/js/62.7c9f892e.js"><link rel="prefetch" href="/reactnavigation/assets/js/63.2bb4f99e.js"><link rel="prefetch" href="/reactnavigation/assets/js/64.f8334968.js"><link rel="prefetch" href="/reactnavigation/assets/js/65.875ba9b5.js"><link rel="prefetch" href="/reactnavigation/assets/js/66.db24112d.js"><link rel="prefetch" href="/reactnavigation/assets/js/67.380ff58e.js"><link rel="prefetch" href="/reactnavigation/assets/js/68.50e28dee.js"><link rel="prefetch" href="/reactnavigation/assets/js/69.7f06bdfd.js"><link rel="prefetch" href="/reactnavigation/assets/js/7.3f495a3d.js"><link rel="prefetch" href="/reactnavigation/assets/js/70.9daf0f06.js"><link rel="prefetch" href="/reactnavigation/assets/js/71.80bbb0b5.js"><link rel="prefetch" href="/reactnavigation/assets/js/73.6ea4022e.js"><link rel="prefetch" href="/reactnavigation/assets/js/74.f49f9057.js"><link rel="prefetch" href="/reactnavigation/assets/js/75.789d766a.js"><link rel="prefetch" href="/reactnavigation/assets/js/76.39b71742.js"><link rel="prefetch" href="/reactnavigation/assets/js/77.d37139df.js"><link rel="prefetch" href="/reactnavigation/assets/js/78.2feb8e59.js"><link rel="prefetch" href="/reactnavigation/assets/js/79.44352ab5.js"><link rel="prefetch" href="/reactnavigation/assets/js/8.f9689e81.js"><link rel="prefetch" href="/reactnavigation/assets/js/80.1cd42d15.js"><link rel="prefetch" href="/reactnavigation/assets/js/81.4c1b00d5.js"><link rel="prefetch" href="/reactnavigation/assets/js/82.034d86b2.js"><link rel="prefetch" href="/reactnavigation/assets/js/83.cc905ec6.js"><link rel="prefetch" href="/reactnavigation/assets/js/84.b164ea9e.js"><link rel="prefetch" href="/reactnavigation/assets/js/85.ed310ba9.js"><link rel="prefetch" href="/reactnavigation/assets/js/86.28034a60.js"><link rel="prefetch" href="/reactnavigation/assets/js/9.55c01fa0.js">
+    <link rel="stylesheet" href="/reactnavigation/assets/css/0.styles.c084512d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/reactnavigation/" class="home-link router-link-active"><!----> <span class="site-name">react navigation 5.x</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://reactnavigation.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://reactnavigation.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>指南</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/reactnavigation/guide/Tab.html" class="sidebar-link">选项卡导航器</a></li><li><a href="/reactnavigation/guide/Drawer.html" class="sidebar-link">抽屉导航器</a></li><li><a href="/reactnavigation/guide/Auth.html" class="sidebar-link">身份验证流程</a></li><li><a href="/reactnavigation/guide/safe.html" class="sidebar-link">支持安全区域</a></li><li><a href="/reactnavigation/guide/hide.html" class="sidebar-link">在特定的屏幕隐藏标签栏</a></li><li><a href="/reactnavigation/guide/Diff.html" class="sidebar-link">不同路由的状态栏配置</a></li><li><a href="/reactnavigation/guide/option.html" class="sidebar-link">带有嵌套导航器的屏幕选项</a></li><li><a href="/reactnavigation/guide/androidback.html" class="sidebar-link">自定义Android返回按钮行为</a></li><li><a href="/reactnavigation/guide/Prevent.html" class="sidebar-link">阻止回退</a></li><li><a href="/reactnavigation/guide/change.html" class="sidebar-link">当焦点屏幕改变时调用一个函数</a></li><li><a href="/reactnavigation/guide/AccessProps.html" class="sidebar-link">从任何组件访问导航 prop</a></li><li><a href="/reactnavigation/guide/without.html" class="sidebar-link">在没有 navigation prop 的情况下进行导航</a></li><li><a href="/reactnavigation/guide/Deep.html" class="sidebar-link">深层链接</a></li><li><a href="/reactnavigation/guide/configlink.html" aria-current="page" class="active sidebar-link">配置链接</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#将路径映射到路由名称" class="sidebar-link">将路径映射到路由名称</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#传递参数" class="sidebar-link">传递参数</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#将参数标记为可选的" class="sidebar-link">将参数标记为可选的</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#处理嵌套导航器" class="sidebar-link">处理嵌套导航器</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#处理不匹配的路由或-404" class="sidebar-link">处理不匹配的路由或 404</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#渲染初始路由" class="sidebar-link">渲染初始路由</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#精确匹配路径" class="sidebar-link">精确匹配路径</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#从路径省略屏幕" class="sidebar-link">从路径省略屏幕</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#序列化和解析参数" class="sidebar-link">序列化和解析参数</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#进阶案例" class="sidebar-link">进阶案例</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#更新配置" class="sidebar-link">更新配置</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#playground" class="sidebar-link">Playground</a></li><li class="sidebar-sub-header"><a href="/reactnavigation/guide/configlink.html#应用范例" class="sidebar-link">应用范例</a></li></ul></li><li><a href="/reactnavigation/guide/websupport.html" class="sidebar-link">Web support</a></li><li><a href="/reactnavigation/guide/serverrender.html" class="sidebar-link">服务端渲染</a></li><li><a href="/reactnavigation/guide/track.html" class="sidebar-link">用于分析的屏幕跟踪</a></li><li><a href="/reactnavigation/guide/theme.html" class="sidebar-link">主题</a></li><li><a href="/reactnavigation/guide/persistence.html" class="sidebar-link">状态持续性</a></li><li><a href="/reactnavigation/guide/jest.html" class="sidebar-link">使用 Jest 测试</a></li><li><a href="/reactnavigation/guide/ts.html" class="sidebar-link">使用TypeScript进行类型检查</a></li><li><a href="/reactnavigation/guide/redux.html" class="sidebar-link">Redux 集成</a></li><li><a href="/reactnavigation/guide/local.html" class="sidebar-link">本地化</a></li><li><a href="/reactnavigation/guide/Optimize.html" class="sidebar-link">优化内存使用和性能</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>API 参考</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="配置链接"><a href="#配置链接" class="header-anchor">#</a> 配置链接</h1> <p>在本指南中，我们将配置 React Navigation 来处理外部链接。这是必要的，如果你想:</p> <ol><li>在 Android 和 iOS 的 React Native 应用中处理深度链接</li> <li>在 web 上使用时，在浏览器中启用 URL 集成</li> <li>使用 <code>&lt;Link /&gt;</code> 或 <code>useLinkTo</code> 来使用路径导航。</li></ol> <p>在继续之前，请确保您已经在应用程序中 <a href="/reactnavigation/guide/Deep.html">配置了深度链接</a>。如果你有一个 Android 或 iOS 应用程序，记得指定前缀选项。</p> <p><code>NavigationContainer</code> 接受一个 <code>linking</code> prop，使它更容易处理传入的链接。你可以在 <code>linking</code> prop 中指定的两个最重要的属性是 <code>prefixes</code> 和 <code>config</code>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> NavigationContainer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@react-navigation/native&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> linking <span class="token operator">=</span> <span class="token punctuation">{</span>
+  prefixes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">/* your linking prefixes */</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  config<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* configuration for matching screens with paths */</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>NavigationContainer linking<span class="token operator">=</span><span class="token punctuation">{</span>linking<span class="token punctuation">}</span> fallback<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">&lt;</span>Text<span class="token operator">&gt;</span>Loading<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">&gt;</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span><span class="token comment">/* content */</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>NavigationContainer<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>当您指定 <code>linking</code> 时，React Navigation 将自动处理传入的链接。 在 Android 和 iOS 上，它将使用 React Native 的 <code>Linking</code> 模块处理传入链接，无论是使用该链接打开该应用程序时，还是当该应用程序打开时收到新链接时。 在网络上，它将使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank" rel="noopener noreferrer">History API<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 将 URL 与浏览器同步。</p> <blockquote><p>注意：目前似乎存在 bug（<a href="https://github.com/facebook/react-native/issues/25675" target="_blank" rel="noopener noreferrer">facebook/react-native#25675<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>），导致该 bug 从未在 Android 上解决。 我们添加了一个超时以避免永远卡住，但这意味着在某些情况下可能不会处理该链接。</p></blockquote> <p>您还可以将 <code>fallback</code> 传递给 <code>NavigationContainer</code>，以控制 React Navigation 尝试解析初始深层链接 URL 时显示的内容。</p> <h2 id="将路径映射到路由名称"><a href="#将路径映射到路由名称" class="header-anchor">#</a> 将路径映射到路由名称</h2> <p>要处理链接，您需要将其转换为有效的 <a href="https://reactnavigation.org/docs/navigation-state" target="_blank" rel="noopener noreferrer">导航状态<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，反之亦然。 例如，可以将路径 <code>/rooms/chat?user=jane</code> 转换为以下状态对象：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">&quot;rooms&quot;</span><span class="token punctuation">,</span>
+      state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">&quot;chat&quot;</span><span class="token punctuation">,</span>
+            params<span class="token operator">:</span> <span class="token punctuation">{</span> user<span class="token operator">:</span> <span class="token string">&quot;jane&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>默认情况下，React Navigation 在解析 URL 时将使用路径片段作为路由名称。 但是将路径片段直接转换为路由名称可能不是您所期望的行为，而是您的行为。</p> <p>例如，您可能想将路径 <code>/feed/latest</code> 解析为类似以下内容的内容：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">'Chat'</span><span class="token punctuation">,</span>
+      params<span class="token operator">:</span> <span class="token punctuation">{</span>
+        sort<span class="token operator">:</span> <span class="token string">'latest'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>您可以在 <code>linking</code> 中指定 <code>config</code> 选项来控制如何解析深度链接以满足您的需要。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Chat<span class="token operator">:</span> <span class="token string">&quot;feed/:sort&quot;</span><span class="token punctuation">,</span>
+    Profile<span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>这里，<code>Chat</code> 是处理 URL <code>/feed</code> 的屏幕名称，<code>Profile</code> 处理 URL <code>/user</code>。</p> <p>config 选项可以在 <code>linking</code> 中传递到容器:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> NavigationContainer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@react-navigation/native&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Chat<span class="token operator">:</span> <span class="token string">&quot;feed/:sort&quot;</span><span class="token punctuation">,</span>
+    Profile<span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> linking <span class="token operator">=</span> <span class="token punctuation">{</span>
+  prefixes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;https://mychat.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;mychat://&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  config<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>NavigationContainer linking<span class="token operator">=</span><span class="token punctuation">{</span>linking<span class="token punctuation">}</span> fallback<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">&lt;</span>Text<span class="token operator">&gt;</span>Loading<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">&gt;</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span><span class="token comment">/* content */</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>NavigationContainer<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>config 对象必须匹配应用程序的导航结构。例如，如果你的根导航中有 <code>Chat</code> 和 <code>Profile</code> 屏幕，那么上面的配置就是:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Chat&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>ChatScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Profile&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>ProfileScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Stack<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果你的 <code>Chat</code> 屏幕是在一个嵌套的导航器中，我们需要考虑这一点。例如，考虑以下结构，你的 <code>Profile</code> 屏幕位于根目录，但是 <code>Chat</code> 屏幕嵌套在 <code>Home</code> 目录中:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Home&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>HomeScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Profile&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>ProfileScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Stack<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">HomeScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Chat&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>ChatScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Tab<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>对于上面的结构，我们的配置是这样的:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Chat<span class="token operator">:</span> <span class="token string">&quot;feed/:sort&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    Profile<span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>类似地，任何嵌套都需要反映在配置中。有关详细信息，请参见处理嵌套导航器。</p> <h2 id="传递参数"><a href="#传递参数" class="header-anchor">#</a> 传递参数</h2> <p>一个常见的用例是向屏幕传递参数来传递一些数据。例如，您可能希望 <code>Profile</code> 屏幕有一个 <code>id</code> 参数，以知道它是哪个用户的配置文件。当处理深度链接时，可以通过 URL 向屏幕传递参数。</p> <p>默认情况下，将解析查询参数以获得屏幕上的参数。例如，在上面的示例中，<code>/user?id=wojciech</code> 将把 <code>id</code> 参数传递到 <code>Profile</code> 屏幕。</p> <p>您还可以自定义如何从 URL 解析参数。假设你想让 URL 看起来像 <code>/user/wojciech</code>，其中 <code>id</code> 参数是 <code>wojciech</code>，而不是在查询参数中有 <code>id</code>。您可以通过为路径指定 <code>user/:id</code> 来做到这一点。 <strong>当路径段以 <code>:</code> 开头时，它将被视为一个参数。</strong> 例如，URL /user/wojciech 将解析为 <code>Profile</code> screen，将字符串 <code>wojciech</code> 作为 <code>id</code> 参数的值，并将在 <code>Profile</code> 屏幕中的 <code>route.param.id</code> 中可用。</p> <p>默认情况下，所有参数都被视为字符串。还可以通过在 <code>parse</code> 属性中指定一个函数来解析参数，并在 <code>stringify</code> 属性中指定一个函数来将其转换回字符串，从而定制如何解析它们。</p> <p>如果你想要解析 <code>/user/wojciech/settings</code> 来得到参数 <code>{id: 'user-wojciech' section: 'settings'}</code>，你可以使 <code>Profile</code> 的配置看起来像这样:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Profile<span class="token operator">:</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&quot;user/:id/:section&quot;</span><span class="token punctuation">,</span>
+      parse<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">id</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">user-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      stringify<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">id</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> id<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^user-</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>结果如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">&quot;Profile&quot;</span><span class="token punctuation">,</span>
+      params<span class="token operator">:</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token string">&quot;user-wojciech&quot;</span><span class="token punctuation">,</span> section<span class="token operator">:</span> <span class="token string">&quot;settings&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="将参数标记为可选的"><a href="#将参数标记为可选的" class="header-anchor">#</a> 将参数标记为可选的</h2> <p>有时 URL 中可能有参数，也可能没有，这取决于某些条件。例如，在上面的场景中，您可能并不总是在 URL 中有 <code>section</code> 参数，即 <code>/user/wojciech/settings</code> 和 <code>/user/wojciech</code> 都应该转到 <code>Profile</code> 屏幕，但是 <code>section</code> 参数(在本例中带有值设置)可能存在，也可能不存在。</p> <p>在这种情况下，您需要将 <code>section</code> 参数标记为可选的。你可以通过添加?参数名称后的后缀:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Profile<span class="token operator">:</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&quot;user/:id/:section?&quot;</span><span class="token punctuation">,</span>
+      parse<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">id</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">user-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      stringify<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">id</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> id<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^user-</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>使用 URL <code>/users/wojciech</code>，结果是:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">&quot;Profile&quot;</span><span class="token punctuation">,</span>
+      params<span class="token operator">:</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token string">&quot;user-wojciech&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>如果 URL 包含一个 section 参数，例如 <code>/users/wojciech/settings</code>，这将产生相同的配置如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">&quot;Profile&quot;</span><span class="token punctuation">,</span>
+      params<span class="token operator">:</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token string">&quot;user-wojciech&quot;</span><span class="token punctuation">,</span> section<span class="token operator">:</span> <span class="token string">&quot;settings&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="处理嵌套导航器"><a href="#处理嵌套导航器" class="header-anchor">#</a> 处理嵌套导航器</h2> <p>有时你会把目标导航器嵌套在其他导航器中，这些导航器不是深链接的一部分。例如，假设你的导航结构是这样的:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Profile&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>Profile<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Feed&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>Feed<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Tab<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Home&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>Home<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">&quot;Settings&quot;</span> component<span class="token operator">=</span><span class="token punctuation">{</span>Settings<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Stack<span class="token punctuation">.</span>Navigator<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在这里，根组件中有一个堆栈导航器，在根堆栈的 <code>Home</code> 屏幕中，有一个带有各种屏幕的选项卡导航器。使用这个结构，假设您希望路径 <code>/users/:id</code> 转到 <code>Profile</code> 屏幕。你可以这样表示嵌套的配置:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;users/:id&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>在这个配置中，您指定 <code>Profile</code> 屏幕应该为 <code>users/:id</code> 模式进行解析，并且它嵌套在 <code>Home</code> 屏幕中。然后解析用户 <code>/jane</code> 会得到以下状态对象:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">&quot;Home&quot;</span><span class="token punctuation">,</span>
+      state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">&quot;Profile&quot;</span><span class="token punctuation">,</span>
+            params<span class="token operator">:</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token string">&quot;jane&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>需要注意的是，状态对象必须与嵌套导航器的层次结构匹配。否则该状态将被丢弃。</p> <h2 id="处理不匹配的路由或-404"><a href="#处理不匹配的路由或-404" class="header-anchor">#</a> 处理不匹配的路由或 404</h2> <p>如果你的应用程序打开了一个无效的 URL，大多数时候你会想要显示一个带有一些信息的错误页面。在网络上，这通常被称为 404 -或页面找不到错误。</p> <p>要处理这个问题，您需要定义一个捕获所有路由，如果没有其他路由匹配该路径，该路由将被渲染。您可以通过为路径匹配模式指定 <code>*</code> 来做到这一点。</p> <p>栗子：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      initialRouteName<span class="token operator">:</span> <span class="token string">&quot;Feed&quot;</span><span class="token punctuation">,</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;users/:id&quot;</span><span class="token punctuation">,</span>
+        Settings<span class="token operator">:</span> <span class="token string">&quot;settings&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    NotFound<span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>在这里，我们定义了一个名为 <code>NotFound</code> 的路由，并将其设置为与 <code>*</code> (即所有内容)匹配。如果路径不匹配 <code>user/:id</code> 或 <code>settings</code>，它将被这个路由匹配。</p> <p>因此，像 <code>/library</code> 或 <code>/settings/notification</code> 这样的路径将解析为以下状态对象:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">&quot;NotFound&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>你甚至可以去更具体的，例如，如果你想在 <code>/settings</code> 下显示无效路径的不同屏幕，你可以在 <code>settings</code> 下指定这样一个模式:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      initialRouteName<span class="token operator">:</span> <span class="token string">&quot;Feed&quot;</span><span class="token punctuation">,</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;users/:id&quot;</span><span class="token punctuation">,</span>
+        Settings<span class="token operator">:</span> <span class="token punctuation">{</span>
+          path<span class="token operator">:</span> <span class="token string">&quot;settings&quot;</span><span class="token punctuation">,</span>
+          screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+            InvalidSettings<span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    NotFound<span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>使用此配置，路径 <code>/settings/notification</code> 将解析为以下状态对象:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">&quot;Home&quot;</span><span class="token punctuation">,</span>
+      state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        index<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">&quot;Feed&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">&quot;Settings&quot;</span><span class="token punctuation">,</span>
+            state<span class="token operator">:</span> <span class="token punctuation">{</span>
+              routes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">&quot;InvalidSettings&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>在进行服务器渲染时，还需要返回 404 错误的正确状态代码。请参阅 <a href="https://reactnavigation.org/docs/server-rendering#handling-404-or-other-status-codes" target="_blank" rel="noopener noreferrer">服务器渲染<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 文档了解如何处理它。</p> <h2 id="渲染初始路由"><a href="#渲染初始路由" class="header-anchor">#</a> 渲染初始路由</h2> <p>有时您希望确保某个屏幕始终作为导航器状态下的第一个屏幕出现。您可以使用 <code>initialRouteName</code> 属性来指定用于初始屏幕的屏幕。</p> <p>在上面的例子中，如果你想让 <code>Feed</code> 屏幕成为 <code>Home</code> 导航器的初始路径，你的配置如下所示:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      initialRouteName<span class="token operator">:</span> <span class="token string">&quot;Feed&quot;</span><span class="token punctuation">,</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;users/:id&quot;</span><span class="token punctuation">,</span>
+        Settings<span class="token operator">:</span> <span class="token string">&quot;settings&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>然后，路径 <code>/users/42</code> 将解析为以下状态对象:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">&quot;Home&quot;</span><span class="token punctuation">,</span>
+      state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        index<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">&quot;Feed&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">&quot;Profile&quot;</span><span class="token punctuation">,</span>
+            params<span class="token operator">:</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token string">&quot;42&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>不可能通过 URL 将参数传递到初始屏幕。所以确保你的初始路由不需要任何参数，或者指定 <code>initialParams</code> 来传递所需的参数。</p> <p>在本例中，URL 中的任何参数都只传递给匹配路径模式 <code>users/:id</code> 的 <code>Profile</code> 屏幕，而 <code>Feed</code> 屏幕不接收任何参数。如果希望在 <code>Feed</code> 屏幕中有相同的参数，可以指定 <a href="https://reactnavigation.org/docs/navigation-container#linkinggetstatefrompath" target="_blank" rel="noopener noreferrer">自定义 <code>getStateFromPath</code> 函数<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 并复制这些参数。</p> <p>类似地，如果你想从子屏幕访问父屏幕的参数，你可以使用 React Context 来公开它们。</p> <h2 id="精确匹配路径"><a href="#精确匹配路径" class="header-anchor">#</a> 精确匹配路径</h2> <p>默认情况下，为每个屏幕定义的路径是根据相对于父屏幕路径的 URL 进行匹配的。考虑以下配置:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&quot;feed&quot;</span><span class="token punctuation">,</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;users/:id&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>在这里，您为 <code>Home</code> 屏幕以及 <code>Profile</code> 子屏幕定义了一个 <code>path</code> 属性。<code>Profile</code> 屏幕指定路径 <code>users/:id</code>，但由于它嵌套在带有路径 <code>feed</code> 的屏幕中，它将尝试匹配模式 <code>feed/users/:id</code>。</p> <p>这将导致 URL <code>/feed</code> 导航到主屏幕，而 <code>/feed/users/cal</code> 导航到 <code>Profile</code> 屏幕。</p> <p>在这种情况下，使用类似 <code>/users/cal</code> 的 URL 导航到 <code>Profile</code> 屏幕更有意义，而不是使用 <code>/feed/users/cal</code>。为了实现这一点，你可以覆盖相对匹配行为来精确匹配:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&quot;feed&quot;</span><span class="token punctuation">,</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Profile<span class="token operator">:</span> <span class="token punctuation">{</span>
+          path<span class="token operator">:</span> <span class="token string">&quot;users/:id&quot;</span><span class="token punctuation">,</span>
+          exact<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>如果将 <code>exact</code> 属性设置为 <code>true</code>, <code>Profile</code> 将忽略父屏幕的路径配置，您将能够使用类似 <code>users/cal</code> 的 URL 导航到 <code>Profile</code>。</p> <h2 id="从路径省略屏幕"><a href="#从路径省略屏幕" class="header-anchor">#</a> 从路径省略屏幕</h2> <p>有时，您可能不希望在路径中有屏幕的路由名。例如，假设你有一个 <code>Home</code> 屏幕，我们的 <a href="https://reactnavigation.org/docs/navigation-state" target="_blank" rel="noopener noreferrer">导航状态<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 是这样的:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">&quot;Home&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>当这个状态被序列化到一个带有以下配置的路径时，你会得到 <code>/home</code>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&quot;home&quot;</span><span class="token punctuation">,</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;users/:id&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>但如果 URL 只是访问 <code>Home</code> 屏幕时的 <code>/</code>，那就更好了。你可以指定一个空字符串作为路径，或者根本不指定路径，而 React Navigation 不会将屏幕添加到路径中(就像在路径中添加空字符串，这不会改变任何东西):</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token operator">:</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;users/:id&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="序列化和解析参数"><a href="#序列化和解析参数" class="header-anchor">#</a> 序列化和解析参数</h2> <p>由于 url 是字符串，所以在构造路径时，任何用于路由的参数也会被转换为字符串。</p> <p>例如，假设你有如下状态:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">'Chat'</span><span class="token punctuation">,</span>
+      params<span class="token operator">:</span> <span class="token punctuation">{</span> at<span class="token operator">:</span> <span class="token number">1589842744264</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>它将被转换成 <code>chat/1589842744264</code> 配置如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Chat<span class="token operator">:</span> <span class="token string">&quot;chat/:date&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>解析此路径时，您将获得以下状态:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> <span class="token string">'Chat'</span><span class="token punctuation">,</span>
+      params<span class="token operator">:</span> <span class="token punctuation">{</span> date<span class="token operator">:</span> <span class="token string">'1589842744264'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这里，日期参数被解析为一个字符串，因为 React Navigation 不知道它应该是一个时间戳，因此是数字。你可以通过提供一个用于解析的自定义函数来自定义它:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Chat<span class="token operator">:</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&quot;chat/:date&quot;</span><span class="token punctuation">,</span>
+      parse<span class="token operator">:</span> <span class="token punctuation">{</span>
+        date<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>您还可以提供一个自定义函数来序列化参数。例如，假设你想在路径中使用 DD-MM-YYYY 格式，而不是时间戳格式:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Chat<span class="token operator">:</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&quot;chat/:date&quot;</span><span class="token punctuation">,</span>
+      parse<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">date</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">date</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      stringify<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">date</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">date</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+          <span class="token keyword">return</span> d<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;-&quot;</span> <span class="token operator">+</span> d<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;-&quot;</span> <span class="token operator">+</span> d<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>根据您的需求，您可以使用此功能来解析和字符串化更复杂的数据。</p> <h2 id="进阶案例"><a href="#进阶案例" class="header-anchor">#</a> 进阶案例</h2> <p>对于某些高级情况，指定映射可能还不够。要处理这种情况，可以指定一个自定义函数将 URL 解析为一个状态对象(<a href="https://reactnavigation.org/docs/navigation-container#linkinggetstatefrompath" target="_blank" rel="noopener noreferrer">getStateFromPath<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>)，并指定一个自定义函数将状态对象序列化为一个 URL (<a href="https://reactnavigation.org/docs/navigation-container#linkinggetpathfromstate" target="_blank" rel="noopener noreferrer">getPathFromState<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>)。</p> <p>栗子：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> linking <span class="token operator">=</span> <span class="token punctuation">{</span>
+  prefixes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;https://mychat.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;mychat://&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  config<span class="token operator">:</span> <span class="token punctuation">{</span>
+    screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+      Chat<span class="token operator">:</span> <span class="token string">&quot;feed/:sort&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">getStateFromPath</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">path<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Return a state object here</span>
+    <span class="token comment">// You can also reuse the default logic by importing `getStateFromPath` from `@react-navigation/native`</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">getPathFromState</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Return a path string here</span>
+    <span class="token comment">// You can also reuse the default logic by importing `getPathFromState` from `@react-navigation/native`</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="更新配置"><a href="#更新配置" class="header-anchor">#</a> 更新配置</h2> <p>旧版本的 React Navigation 在链接的配置格式上略有不同。旧的配置允许在对象中使用简单的键值对，而不考虑导航器的嵌套:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  Home<span class="token operator">:</span> <span class="token string">&quot;home&quot;</span><span class="token punctuation">,</span>
+  Feed<span class="token operator">:</span> <span class="token string">&quot;feed&quot;</span><span class="token punctuation">,</span>
+  Profile<span class="token operator">:</span> <span class="token string">&quot;profile&quot;</span><span class="token punctuation">,</span>
+  Settings<span class="token operator">:</span> <span class="token string">&quot;settings&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="st-quote" style="border-color:#347603;background-color:#B7D6A0;"><p>此处翻译忽略，如有需要请看原文： https://reactnavigation.org/docs/configuring-links#updating-config</p></div> <h2 id="playground"><a href="#playground" class="header-anchor">#</a> Playground</h2> <p>您可以自定义下面的配置和路径，并查看路径是如何解析的。</p> <blockquote><p>翻译不了，同上吧。</p></blockquote> <h2 id="应用范例"><a href="#应用范例" class="header-anchor">#</a> 应用范例</h2> <p>在示例应用程序中，您将使用 Expo 管理的工作流。该指南将专注于创建深度链接配置，而不是创建组件本身，但你总是可以检查 github repo 中的完整实现。</p> <p>首先，你需要决定应用的导航结构。为了保持简单，主导航器将是带有两个屏幕的底部标签导航器。它的第一个屏幕将是一个简单的堆栈导航器，称为<code>HomeStack</code>，有两个屏幕:<code>Home</code> 和 <code>Profile</code>，第二个选项卡屏幕将是一个简单的没有任何嵌套导航器的屏幕，称为 <code>Settings</code>:</p> <div class="language-js extra-class"><pre class="language-js"><code>BottomTabs
+├── <span class="token function">Stack</span> <span class="token punctuation">(</span>HomeStack<span class="token punctuation">)</span>
+│   ├── Home
+│   └── Profile
+└── Settings
+</code></pre></div><p>在创建导航结构之后，您可以为深度链接创建一个配置，它将包含每个屏幕到路径段的映射。例如:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    HomeStack<span class="token operator">:</span> <span class="token punctuation">{</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Home<span class="token operator">:</span> <span class="token string">&quot;home&quot;</span><span class="token punctuation">,</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    Settings<span class="token operator">:</span> <span class="token string">&quot;settings&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>如您所见，<code>Home</code> 和 <code>Profile</code> 嵌套在 <code>HomeStack</code> 的屏幕属性中。这意味着当你传递 <code>/home</code> URL 时，它将被解析为一个 <code>HomeStack</code>-&gt; <code>Home</code> 状态对象(类似于<code>/user</code>，它将是 <code>HomeStack</code>-&gt;<code>Profile</code>)。该对象的嵌套应该与导航器的嵌套相匹配。</p> <p>这里，<code>HomeStack</code> 属性包含一个配置对象。配置可以深入到你想要的程度，例如，如果 <code>Home</code> 是一个导航器，你可以使它成为一个带有 <code>screens</code> 属性的对象，并在其中放置更多的屏幕或导航器，使 URL 字符串更具可读性。</p> <p>如果您想要一个特定的屏幕用作导航器中的初始屏幕，该怎么办呢?例如，如果您有一个可以打开 <code>Home</code> 屏幕的 URL，那么您希望能够使用导航的 <code>navigation.goBack()</code> 方法从它导航到 <code>Profile</code>。可以通过为导航器定义 <code>initialRouteName</code> 来实现。它看起来是这样的:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+    HomeStack<span class="token operator">:</span> <span class="token punctuation">{</span>
+      initialRouteName<span class="token operator">:</span> <span class="token string">&quot;Profile&quot;</span><span class="token punctuation">,</span>
+      screens<span class="token operator">:</span> <span class="token punctuation">{</span>
+        Home<span class="token operator">:</span> <span class="token string">&quot;home&quot;</span><span class="token punctuation">,</span>
+        Profile<span class="token operator">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    Settings<span class="token operator">:</span> <span class="token string">&quot;settings&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/reactnavigation/guide/Deep.html" class="prev">
+        深层链接
+      </a></span> <span class="next"><a href="/reactnavigation/guide/websupport.html">
+        Web support
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/reactnavigation/assets/js/app.06c5ad1f.js" defer></script><script src="/reactnavigation/assets/js/2.1931d008.js" defer></script><script src="/reactnavigation/assets/js/72.87246514.js" defer></script><script src="/reactnavigation/assets/js/6.2a89f9f8.js" defer></script>
+  </body>
+</html>
