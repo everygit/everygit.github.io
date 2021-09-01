@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>flex 滚动条 | flex 实践集锦</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="just a test desc">
+    
+    <link rel="preload" href="/flex/assets/css/0.styles.2b015962.css" as="style"><link rel="preload" href="/flex/assets/js/app.a9370bf2.js" as="script"><link rel="preload" href="/flex/assets/js/2.c6c5e38b.js" as="script"><link rel="preload" href="/flex/assets/js/9.90a43a43.js" as="script"><link rel="prefetch" href="/flex/assets/js/3.847e87f7.js"><link rel="prefetch" href="/flex/assets/js/4.8fe15cfe.js"><link rel="prefetch" href="/flex/assets/js/5.6721a1a2.js"><link rel="prefetch" href="/flex/assets/js/6.0f90c3e1.js"><link rel="prefetch" href="/flex/assets/js/7.8bb4ebec.js"><link rel="prefetch" href="/flex/assets/js/8.d299d074.js">
+    <link rel="stylesheet" href="/flex/assets/css/0.styles.2b015962.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/flex/" class="home-link router-link-active"><!----> <span class="site-name">flex 实践集锦</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>概述</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/flex/" aria-current="page" class="sidebar-link">了解 flex</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>教程</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/flex/course/" class="sidebar-link">基础教程</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>实践</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/flex/practice/" aria-current="page" class="active sidebar-link">flex 滚动条</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/flex/practice/#在全局的-flex-下-实现滚动条" class="sidebar-link">在全局的 flex 下，实现滚动条</a></li><li class="sidebar-sub-header"><a href="/flex/practice/#在交叉轴无法出现滚动条" class="sidebar-link">在交叉轴无法出现滚动条</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="flex-滚动条"><a href="#flex-滚动条" class="header-anchor">#</a> flex 滚动条</h1> <p>由于弹性布局，导致滚动条有点不一样</p> <h2 id="在全局的-flex-下-实现滚动条"><a href="#在全局的-flex-下-实现滚动条" class="header-anchor">#</a> 在全局的 flex 下，实现滚动条</h2> <p>当使用 <code>overflow: auto</code> 的时候，无法出现滚动条，而本身会发生变化，原因是由于父节点没有固定高度（主轴轴是横轴）导致，无法解释出本身盒子的大小。</p> <p>解决方案是，通过给固定高度（主轴轴是横轴）或者父节点要增加 <code>overflow: hidden</code> 来约束高度。</p> <h2 id="在交叉轴无法出现滚动条"><a href="#在交叉轴无法出现滚动条" class="header-anchor">#</a> 在交叉轴无法出现滚动条</h2> <p>原因是 flex 的 <code>align-items</code> 默认值是 <code>stretch</code> 导致无法解释，将高度（交叉轴是纵向）或宽度（交叉轴是横向）设置为 0 即可。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/flex/course/" class="prev">
+        基础教程
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/flex/assets/js/app.a9370bf2.js" defer></script><script src="/flex/assets/js/2.c6c5e38b.js" defer></script><script src="/flex/assets/js/9.90a43a43.js" defer></script>
+  </body>
+</html>
