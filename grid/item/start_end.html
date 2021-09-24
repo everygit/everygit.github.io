@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>grid-column-start, grid-column-end, grid-row-start 和 grid-row-end | Grid の菊花宝典</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="just a test desc">
+    
+    <link rel="preload" href="/grid/assets/css/0.styles.3b5aad34.css" as="style"><link rel="preload" href="/grid/assets/js/app.e4ccce92.js" as="script"><link rel="preload" href="/grid/assets/js/2.c6c5e38b.js" as="script"><link rel="preload" href="/grid/assets/js/28.9f8d8269.js" as="script"><link rel="prefetch" href="/grid/assets/js/10.97d7289f.js"><link rel="prefetch" href="/grid/assets/js/11.86acb03f.js"><link rel="prefetch" href="/grid/assets/js/12.3a750989.js"><link rel="prefetch" href="/grid/assets/js/13.476a5ca9.js"><link rel="prefetch" href="/grid/assets/js/14.27c70682.js"><link rel="prefetch" href="/grid/assets/js/15.a631712e.js"><link rel="prefetch" href="/grid/assets/js/16.8219d415.js"><link rel="prefetch" href="/grid/assets/js/17.4c5a9699.js"><link rel="prefetch" href="/grid/assets/js/18.e50a2e66.js"><link rel="prefetch" href="/grid/assets/js/19.1d459b8b.js"><link rel="prefetch" href="/grid/assets/js/20.b35af4c5.js"><link rel="prefetch" href="/grid/assets/js/21.121a64d8.js"><link rel="prefetch" href="/grid/assets/js/22.bff5a69f.js"><link rel="prefetch" href="/grid/assets/js/23.333427c4.js"><link rel="prefetch" href="/grid/assets/js/24.ecabc902.js"><link rel="prefetch" href="/grid/assets/js/25.6858de5d.js"><link rel="prefetch" href="/grid/assets/js/26.3797bfdd.js"><link rel="prefetch" href="/grid/assets/js/27.33505d9c.js"><link rel="prefetch" href="/grid/assets/js/3.a83e85b5.js"><link rel="prefetch" href="/grid/assets/js/4.8fe15cfe.js"><link rel="prefetch" href="/grid/assets/js/5.6721a1a2.js"><link rel="prefetch" href="/grid/assets/js/6.0f90c3e1.js"><link rel="prefetch" href="/grid/assets/js/7.cb2138f3.js"><link rel="prefetch" href="/grid/assets/js/8.2180d76f.js"><link rel="prefetch" href="/grid/assets/js/9.8b72499c.js">
+    <link rel="stylesheet" href="/grid/assets/css/0.styles.3b5aad34.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/grid/" class="home-link router-link-active"><!----> <span class="site-name">Grid の菊花宝典</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://www.zhangxinxu.com/wordpress/2018/11/display-grid-css-css3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Grid 教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://www.zhangxinxu.com/wordpress/2018/11/display-grid-css-css3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Grid 教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>概述</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/grid/" aria-current="page" class="sidebar-link">了解 grid</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>容器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>子项</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/grid/item/" aria-current="page" class="sidebar-link">概述</a></li><li><a href="/grid/item/start_end.html" aria-current="page" class="active sidebar-link">grid-column-start, grid-column-end, grid-row-start和grid-row-end</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/grid/item/start_end.html#语法" class="sidebar-link">语法</a></li><li class="sidebar-sub-header"><a href="/grid/item/start_end.html#实例" class="sidebar-link">实例</a></li></ul></li><li><a href="/grid/item/column_row.html" class="sidebar-link">grid-column 和 grid-row</a></li><li><a href="/grid/item/area.html" class="sidebar-link">grid-area</a></li><li><a href="/grid/item/justify.html" class="sidebar-link">justify-self</a></li><li><a href="/grid/item/align.html" class="sidebar-link">align-self</a></li><li><a href="/grid/item/place.html" class="sidebar-link">place-self</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="grid-column-start-grid-column-end-grid-row-start-和-grid-row-end"><a href="#grid-column-start-grid-column-end-grid-row-start-和-grid-row-end" class="header-anchor">#</a> grid-column-start, grid-column-end, grid-row-start 和 grid-row-end</h1> <p>表示 grid 子项所占据的区域的起始和终止位置，包括水平方向和垂直方向。</p> <h2 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">grid-column-start</span><span class="token punctuation">:</span> &lt;number&gt; | &lt;name&gt; | span &lt;number&gt; | span &lt;name&gt; | auto<span class="token punctuation">;</span>
+  <span class="token property">grid-column-end</span><span class="token punctuation">:</span> &lt;number&gt; | &lt;name&gt; | span &lt;number&gt; | span &lt;name&gt; | auto<span class="token punctuation">;</span>
+  <span class="token property">grid-row-start</span><span class="token punctuation">:</span> &lt;number&gt; | &lt;name&gt; | span &lt;number&gt; | span &lt;name&gt; | auto<span class="token punctuation">;</span>
+  <span class="token property">grid-row-end</span><span class="token punctuation">:</span> &lt;number&gt; | &lt;name&gt; | span &lt;number&gt; | span &lt;name&gt; | auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>&lt;number&gt;</code> 起止与第几条网格线。</li> <li><code>&lt;name&gt;</code> 自定义的网格线的名称。</li> <li><code>span &lt;number&gt;</code> 表示当前网格会自动跨越指定的网格数量。</li> <li><code>span &lt;name&gt;</code> 表示当前网格会自动扩展，直到命中指定的网格线名称。</li> <li><code>auto</code> 全自动，包括定位，跨度等</li></ul> <h2 id="实例"><a href="#实例" class="header-anchor">#</a> 实例</h2> <p>跨两列， 1 表示一个网格线，就是容器的左侧边缘，3 就是第三条网格线，第二个网格的右侧边缘</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">grid-column-start</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">grid-column-end</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>使用网格名称，在这里同样还是跨两列</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> [网格边边] 200px [lsp] 1fr [吃桃子凉凉] 2fr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">grid-column-start</span><span class="token punctuation">:</span> 网格边边<span class="token punctuation">;</span>
+  <span class="token property">grid-column-end</span><span class="token punctuation">:</span> 吃桃子凉凉<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>使用 span，这里还是跨两列，真气人 O(∩_∩)O 哈哈~</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">grid-column-start</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">grid-column-end</span><span class="token punctuation">:</span> span 2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/grid/item/" class="prev router-link-active">
+        概述
+      </a></span> <span class="next"><a href="/grid/item/column_row.html">
+        grid-column 和 grid-row
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/grid/assets/js/app.e4ccce92.js" defer></script><script src="/grid/assets/js/2.c6c5e38b.js" defer></script><script src="/grid/assets/js/28.9f8d8269.js" defer></script>
+  </body>
+</html>
